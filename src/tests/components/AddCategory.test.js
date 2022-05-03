@@ -48,4 +48,20 @@ describe('Test <AddCategory />', () => {
     expect(setCategories).toBeCalledTimes(1);
   });
 
+  test('should call setCategories and clean text box', () => {
+    const setCategories = jest.fn();
+    render(<AddCategory setCategories={setCategories} />);
+
+    const input = screen.getByTestId('AddCategoryInput');
+    const value = 'One Punch';
+    fireEvent.change(input, {target: {value: value}});
+
+    const form = screen.getByTestId('AddCategoryForm');
+    fireEvent.submit(form);
+
+    expect(setCategories).toBeCalledTimes(1);
+    expect(setCategories).toBeCalledWith(expect.any(Function));
+    expect(input.value).toBe('');
+  });
+
 });
