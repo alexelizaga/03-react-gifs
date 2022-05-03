@@ -2,6 +2,7 @@
 
 exports[`Test <AddCategory /> should render <AddCategory /> correctly 1`] = `
 <form
+  data-testid="AddCategoryForm"
   onSubmit={[Function]}
 >
   <input

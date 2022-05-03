@@ -24,4 +24,28 @@ describe('Test <AddCategory />', () => {
     expect(input.value).toBe(value);
   });
 
+  test('should not post information on submit', () => {
+    const setCategories = jest.fn();
+    render(<AddCategory setCategories={setCategories} />);
+
+    const form = screen.getByTestId('AddCategoryForm');
+    fireEvent.submit(form);
+
+    expect(setCategories).not.toBeCalled();
+  });
+
+  test('should post information on submit', () => {
+    const setCategories = jest.fn();
+    render(<AddCategory setCategories={setCategories} />);
+
+    const input = screen.getByTestId('AddCategoryInput');
+    const value = 'One Punch';
+    fireEvent.change(input, {target: {value: value}});
+
+    const form = screen.getByTestId('AddCategoryForm');
+    fireEvent.submit(form);
+
+    expect(setCategories).toBeCalledTimes(1);
+  });
+
 });
