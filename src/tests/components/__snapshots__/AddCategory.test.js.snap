@@ -5,6 +5,7 @@ exports[`Test <AddCategory /> should render <AddCategory /> correctly 1`] = `
   onSubmit={[Function]}
 >
   <input
+    data-testid="AddCategoryInput"
     onChange={[Function]}
     type="text"
     value=""

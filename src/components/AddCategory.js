@@ -20,6 +20,7 @@ export const AddCategory = ({ setCategories }) => {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        data-testid='AddCategoryInput'
         type="text"
         value={inputValue}
         onChange={handleInputChange}
