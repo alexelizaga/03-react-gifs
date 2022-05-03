@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
 
+import { AddCategory } from './components/AddCategory';
+
 const GifApp = () => {
   const [categories, setCategories] = useState(['One Punch', 'Samurai X', 'Dragon Ball']);
 
-  const handleAdd = (newCategory) => {
-    setCategories([...categories, newCategory]);
-  };
+  // const handleAdd = (newCategory) => {
+  //   setCategories([...categories, newCategory]);
+  // };
 
   return (
     <>
       <h2>GifApp</h2>
+      <AddCategory />
       <hr />
 
-      <button onClick={() => handleAdd('HunterXHunter')}>Agregar</button>
+      <button onClick={() =>{}}>Agregar</button>
 
       <ol>
         { 
