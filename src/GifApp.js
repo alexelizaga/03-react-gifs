@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 
-const GifApp = () => {
+export const GifApp = () => {
   const [categories, setCategories] = useState(['One Punch']);
 
   return (
@@ -22,5 +22,3 @@ const GifApp = () => {
     </>
   )
 }
-
-export default GifApp;
