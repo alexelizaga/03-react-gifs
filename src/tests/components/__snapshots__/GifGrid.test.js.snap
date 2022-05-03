@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <GifGrid /> should render <GifGrid /> correctly 1`] = `
+Array [
+  <h3
+    className="animate__animated animate__fadeIn"
+  >
+    One punch
+  </h3>,
+  <p
+    className="animate__animated animate__flash"
+  >
+    Loading...
+  </p>,
+  <div
+    className="card-grid"
+  />,
+]
+`;
+
+exports[`Test <GifGrid /> should show items when its load images 1`] = `
+Array [
+  <h3
+    className="animate__animated animate__fadeIn"
+  >
+    One punch
+  </h3>,
+  <div
+    className="card-grid"
+  >
+    <div
+      className="card animate__animated animate__fadeIn"
+      data-testid="GifGridItem"
+    >
+      <img
+        alt="Title"
+        data-testid="GifGridItemImg"
+        src="https://www.test.com"
+      />
+      <p
+        data-testid="GifGridItemTitle"
+      >
+        Title
+      </p>
+    </div>
+  </div>,
+]
+`;
