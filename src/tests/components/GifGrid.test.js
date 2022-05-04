@@ -22,20 +22,30 @@ describe('Test <GifGrid />', () => {
   });
 
   test('should show items when its load images', () => {
-    const gifs = [{
-      id: 'ABC',
-      url: 'https://www.test.com',
-      title: 'Title'
-    }]
+    const gifs = [
+      {
+        id: 'ABC',
+        url: 'https://www.test1.com',
+        title: 'Title1'
+      },
+      {
+        id: '123',
+        url: 'https://www.test2.com',
+        title: 'Title2'
+      },
+    ]
     useFetchGifs.mockReturnValue({
       data: gifs,
       loading: false
     });
-    // render(<GifGrid category={category} />);
-    const tree = renderer
-      .create(<GifGrid category={category} />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+
+    render(<GifGrid category={category} />);
+
+    const p = screen.queryByTestId('GifGridLoading');
+    expect(p).not.toBeInTheDocument();
+
+    const GifGridItems = screen.getAllByTestId('GifGridItem');
+    expect(GifGridItems.length).toBe(gifs.length);
   });
 
 });
