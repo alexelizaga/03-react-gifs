@@ -14,8 +14,4 @@ describe('Test useFetchGifs', () => {
     expect( loading ).toBeTruthy();
   });
 
-  test('should return update state', async () => {
-    
-  });
-
 });
