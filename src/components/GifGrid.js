@@ -8,8 +8,8 @@ export const GifGrid = ({ category }) => {
   const { loading, data: images } = useFetchGifs(category);
 
   return (
-    <>
-      <h3 className='animate__animated animate__fadeIn'>{ category }</h3>
+    <div data-testid='GifGrid'>
+      <h3 data-testid="GifGridTitle" className='animate__animated animate__fadeIn'>{ category }</h3>
 
       { loading && <p data-testid='GifGridLoading' className='animate__animated animate__flash'>Loading...</p> }
 
@@ -24,7 +24,7 @@ export const GifGrid = ({ category }) => {
         }
       </div>
 
-    </>
+    </div>
   )
 }
 

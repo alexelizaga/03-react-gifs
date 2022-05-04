@@ -1,20 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Test <GifGrid /> should render <GifGrid /> correctly 1`] = `
-Array [
+<div
+  data-testid="GifGrid"
+>
   <h3
     className="animate__animated animate__fadeIn"
+    data-testid="GifGridTitle"
   >
     One punch
-  </h3>,
+  </h3>
   <p
     className="animate__animated animate__flash"
     data-testid="GifGridLoading"
   >
     Loading...
-  </p>,
+  </p>
   <div
     className="card-grid"
-  />,
-]
+  />
+</div>
 `;
